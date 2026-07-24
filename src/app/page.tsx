@@ -6,7 +6,6 @@ import { CategoryStories } from '../components/CategoryStories';
 import { HeroSection } from '../components/HeroSection';
 import { LatestDeals } from '../components/LatestDeals';
 import { TodaysHottestOffers } from '../components/TodaysHottestOffers';
-import { ColorCustomizer } from '../components/ColorCustomizer';
 
 export default function HomePage() {
   return (
@@ -25,9 +24,6 @@ export default function HomePage() {
 
       {/* 5. Today's Hottest Offers Section */}
       <TodaysHottestOffers />
-
-      {/* Interactive Color Customizer Widget */}
-      <ColorCustomizer />
     </main>
   );
 }
