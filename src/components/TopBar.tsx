@@ -22,7 +22,6 @@ export const TopBar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20 gap-4 sm:gap-8">
           
-          {/* Logo */}
           <a href="#" className="flex items-center gap-2 group flex-shrink-0">
             <div 
               className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white font-extrabold text-xl shadow-md transition-transform duration-300 group-hover:scale-105"
@@ -44,7 +43,6 @@ export const TopBar: React.FC = () => {
             </div>
           </a>
 
-          {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
               <a
@@ -61,7 +59,6 @@ export const TopBar: React.FC = () => {
             ))}
           </nav>
 
-          {/* Search Bar */}
           <div className="flex-1 max-w-xs sm:max-w-md hidden sm:block">
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -85,7 +82,6 @@ export const TopBar: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Controls: User Profile & Cart */}
           <div className="flex items-center gap-3 sm:gap-4">
             <button 
               className="p-2 sm:p-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-colors"
@@ -107,7 +103,6 @@ export const TopBar: React.FC = () => {
               </span>
             </button>
 
-            {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-100"
@@ -119,7 +114,6 @@ export const TopBar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Search Bar & Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-4 animate-in slide-in-from-top duration-200">
           <div className="relative">

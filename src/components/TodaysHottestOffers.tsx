@@ -66,7 +66,6 @@ const HOT_OFFERS: HotOfferProduct[] = [
 export const TodaysHottestOffers: React.FC = () => {
   const { currentTheme } = useTheme();
 
-  // Seconds state for live ticking timer simulation
   const [secondsLeft, setSecondsLeft] = useState(7200);
 
   useEffect(() => {
@@ -92,15 +91,12 @@ export const TodaysHottestOffers: React.FC = () => {
         background: `linear-gradient(135deg, ${currentTheme.primary} 0%, ${currentTheme.secondary} 100%)`,
       }}
     >
-      {/* Decorative background glow shapes */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-black/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
         <div className="text-center space-y-3 mb-12 max-w-2xl mx-auto">
-          {/* Badge */}
           <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-xs font-black uppercase tracking-wider text-white shadow-sm">
             <Flame className="w-4 h-4 fill-white text-white animate-bounce" />
             HOT DEALS
@@ -115,7 +111,6 @@ export const TodaysHottestOffers: React.FC = () => {
           </p>
         </div>
 
-        {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {HOT_OFFERS.map((offer) => {
             const savings = offer.originalPrice - offer.price;
@@ -125,7 +120,6 @@ export const TodaysHottestOffers: React.FC = () => {
                 key={offer.id}
                 className="bg-white text-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-white/40 hover:translate-y-[-4px] transition-all duration-300 flex flex-col justify-between group"
               >
-                {/* Top Image Container */}
                 <div>
                   <div className="relative aspect-[4/3] bg-slate-100 overflow-hidden">
                     <img
@@ -134,31 +128,26 @@ export const TodaysHottestOffers: React.FC = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
 
-                    {/* Top Left: Timer Overlay */}
                     <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-[11px] font-bold text-slate-800 flex items-center gap-1 shadow-md">
                       <Clock className="w-3.5 h-3.5 text-red-500 animate-pulse" />
                       <span>{formatTimer(offer.initialHours, offer.initialMinutes)}</span>
                     </div>
 
-                    {/* Top Right: Discount Overlay */}
                     <div className="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-red-600 text-[11px] font-black text-white uppercase shadow-md">
                       {offer.discount}
                     </div>
 
-                    {/* Bottom Image Overlay: Sold Today */}
                     <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 pt-6 flex items-center gap-1.5 text-xs text-white font-semibold">
                       <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
                       <span>{offer.soldToday} sold today</span>
                     </div>
                   </div>
 
-                  {/* Card Body */}
                   <div className="p-5 space-y-4">
                     <h3 className="text-base font-bold text-slate-900 line-clamp-1 group-hover:text-slate-800">
                       {offer.title}
                     </h3>
 
-                    {/* Price & Savings */}
                     <div className="flex items-center justify-between pt-1">
                       <div>
                         <div className="text-2xl font-black text-red-600 leading-none">
@@ -181,7 +170,6 @@ export const TodaysHottestOffers: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Button */}
                 <div className="p-5 pt-0">
                   <button
                     className="w-full py-3 text-xs sm:text-sm font-bold text-white rounded-xl shadow-lg hover:shadow-xl hover:brightness-105 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-1.5"

@@ -69,7 +69,6 @@ export const CategoryStories: React.FC = () => {
                 onClick={() => setActiveCategory(isSelected ? null : cat.id)}
                 className="flex flex-col items-center group flex-shrink-0 focus:outline-none"
               >
-                {/* Gradient ring container */}
                 <div
                   className="p-[2.5px] rounded-full transition-transform duration-300 group-hover:scale-105 shadow-sm"
                   style={{

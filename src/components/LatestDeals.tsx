@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Star, ArrowRight, ExternalLink } from 'lucide-react';
+import { Star, ArrowRight } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 export interface DealProduct {
@@ -78,7 +78,6 @@ export const LatestDeals: React.FC = () => {
     <section id="latest-deals" className="py-16 bg-white transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
           <div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -102,14 +101,12 @@ export const LatestDeals: React.FC = () => {
           </a>
         </div>
 
-        {/* Product Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
           {LATEST_DEALS.map((product) => (
             <div
               key={product.id}
               className="group bg-white rounded-2xl border border-slate-200/90 overflow-hidden hover:shadow-xl hover:border-slate-300 transition-all duration-300 flex flex-col justify-between"
             >
-              {/* Product Image & Discount Tag */}
               <div>
                 <div className="relative aspect-[4/3] bg-slate-100 overflow-hidden">
                   <img
@@ -117,7 +114,6 @@ export const LatestDeals: React.FC = () => {
                     alt={product.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  {/* Discount Badge */}
                   <div
                     className="absolute top-3 left-3 px-2.5 py-1 text-xs font-black text-white rounded-lg shadow-md"
                     style={{ backgroundColor: currentTheme.primary }}
@@ -126,19 +122,16 @@ export const LatestDeals: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Card Content */}
                 <div className="p-4 space-y-2">
                   <h3 className="text-sm font-bold text-slate-800 line-clamp-2 min-h-[2.5rem] group-hover:text-slate-900 transition-colors">
                     {product.title}
                   </h3>
 
-                  {/* Rating */}
                   <div className="flex items-center gap-1 text-amber-500 text-xs font-semibold">
                     <Star className="w-3.5 h-3.5 fill-current" />
                     <span>{product.rating}</span>
                   </div>
 
-                  {/* Prices */}
                   <div className="flex items-baseline gap-2 pt-1">
                     <span 
                       className="text-base font-extrabold"
@@ -153,7 +146,6 @@ export const LatestDeals: React.FC = () => {
                 </div>
               </div>
 
-              {/* Action Button */}
               <div className="p-4 pt-0">
                 <button
                   className="w-full py-2.5 text-xs font-bold text-white rounded-xl shadow-md hover:shadow-lg hover:brightness-105 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-1"
